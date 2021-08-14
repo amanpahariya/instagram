@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header/Header";
+import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+import HomePage from "./components/HomePage/HomePage";
+import React, {useEffect, useState} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const [width, setWidth] = useState(null);
+    window.addEventListener("resize", () => {
+        setWidth(window.innerWidth);
+    })
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, [])
+    return (
+        <>
+            {width > 650 ? <Header/> : ""}
+            <div className="container">
+                <HomePage/>
+            </div>
+        </>
+    );
 }
 
 export default App;

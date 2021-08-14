@@ -1,0 +1,85 @@
+.homepage-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+
+  main {
+    @media (max-width: 650px) {
+      width: 100%;
+    }
+  }
+
+  .suggestion-container {
+    width: 293px;
+    margin-left: 28px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+
+    .user {
+      .userName {
+        h5 {
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .switch {
+      h5 {
+        font-size: 14px;
+      }
+    }
+
+    .suggestion {
+      margin-top: 12px;
+      padding: 4px 16px;
+
+      .title {
+        font-size: 15px;
+        color: gray;
+      }
+    }
+
+    .suggestion-box {
+      width: 100%;
+
+      ul {
+        list-style: none;
+        padding: 0 0 0 20px;
+
+        .user {
+          .userProfile {
+
+            img {
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+
+          .userName {
+            width: 100%;
+            margin-left: 10px;
+
+            p {
+             font-size: 13px;
+            }
+            :nth-child(2){
+              color: gray;
+            }
+          }
+
+          .follow-btn {
+            background: none;
+            border: 0;
+            font-size: 13px;
+            font-weight: bold;
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+
+}

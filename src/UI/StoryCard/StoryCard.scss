@@ -1,0 +1,33 @@
+.story-card {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 95px;
+
+  .outer-border {
+    background: url("https://static.vecteezy.com/system/resources/thumbnails/002/486/289/small/gradient-background-instagram-free-vector.jpg");
+    padding: 2px;
+    border-radius: 50%;
+
+    .inner-border {
+      background: #ffffff;
+      padding: 2px;
+      border-radius: 50%;
+
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50% 50%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .userName {
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
