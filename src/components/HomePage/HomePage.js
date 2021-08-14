@@ -15,7 +15,8 @@ const HomePage = () => {
                 <Feeds/>
             </main>
             <div className="suggestion-container">
-                <div className="user d-flex justify-content-between align-items-center">
+                <div
+                    className="user d-flex justify-content-between align-items-center">
                     <div>
                         <FontAwesomeIcon icon={faUserCircle} color={"rgb(219,219,219)"}
                                          style={{fontSize: 60, background: "#fff", borderRadius: "50%"}}/>

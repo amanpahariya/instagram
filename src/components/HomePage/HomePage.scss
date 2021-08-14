@@ -16,6 +16,8 @@
     margin-bottom: 10px;
 
     .user {
+      position: sticky;
+      top: 106px;
       .userName {
         h5 {
           font-size: 14px;
@@ -31,6 +33,8 @@
     }
 
     .suggestion {
+      position: sticky;
+      top: 182px;
       margin-top: 12px;
       padding: 4px 16px;
 
@@ -42,6 +46,8 @@
 
     .suggestion-box {
       width: 100%;
+      position: sticky;
+      top: 220px;
 
       ul {
         list-style: none;
@@ -63,9 +69,10 @@
             margin-left: 10px;
 
             p {
-             font-size: 13px;
+              font-size: 13px;
             }
-            :nth-child(2){
+
+            :nth-child(2) {
               color: gray;
             }
           }
@@ -79,6 +86,10 @@
           }
         }
       }
+    }
+
+    @media (max-width: 950px) {
+      display: none;
     }
   }
 

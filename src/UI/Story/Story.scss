@@ -5,6 +5,12 @@
   border: 1px solid rgba(219, 219, 219);
   max-width: 614px;
 
+  @media (max-width: 650px) {
+    max-width: 100%;
+    width: auto;
+  }
+
+
   .carousel {
     position: relative;
 
@@ -39,20 +45,24 @@
         background: white;
       }
     }
-    .rec-slider-container{
+
+    .rec-slider-container {
       margin: 0;
     }
 
     .rec.rec-arrow:disabled {
       visibility: hidden;
     }
-    .rec-carousel-item{
+
+    .rec-carousel-item {
       padding: 0 10px;
-      .rec-item-wrapper{
+
+      .rec-item-wrapper {
         padding: 0 !important;
         width: 75px !important;
       }
     }
+
     .create-story {
       position: relative;
       width: 70px;
