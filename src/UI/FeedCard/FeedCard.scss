@@ -52,9 +52,27 @@
       display: flex;
       justify-content: center;
       background: rgb(219, 219, 219);
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      user-select: none;
 
       img {
         width: 100%;
+      }
+
+      .like-icon {
+        position: absolute;
+        display: inline-block;
+        width: 128px;
+        height: 128px;
+        opacity: 0;
+        color: red;
+        user-select: none;
+
+        &.like {
+          animation: 2s like-heart-animation ease-out;
+        }
       }
     }
 
@@ -158,5 +176,27 @@
     }
   }
 
-
+  @keyframes like-heart-animation {
+    0%,
+    to {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    15% {
+      opacity: 0.9;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    30% {
+      -webkit-transform: scale(0.95);
+      transform: scale(0.95);
+    }
+    45%, 80% {
+      opacity: 0.9;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
 }
+

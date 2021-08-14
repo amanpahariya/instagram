@@ -1,12 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './FeedCard.scss';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faHeart, faPaperPlane, faComment, faBookmark, faGrinBeam} from "@fortawesome/free-regular-svg-icons";
+import {
+    faHeart as faHeartRegular,
+    faPaperPlane,
+    faComment,
+    faBookmark,
+    faGrinBeam
+} from "@fortawesome/free-regular-svg-icons";
+import {faHeart} from "@fortawesome/free-solid-svg-icons";
 
 const FeedCard = (props) => {
     const {post} = props;
+
+    const [userLiked, setUserLiked] = useState(false);
+
+    const doubleClick = (e) => {
+
+        e.target.querySelector("#likeIcon").classList.add("like");
+        setUserLiked(true);
+        setTimeout(() => {
+            e.target.querySelector("#likeIcon").classList.remove("like");
+        }, 1200);
+
+    }
     return (
         <section className="post-container">
+
             <header className="user">
                 <div className="profile">
                     <div>
@@ -18,8 +38,9 @@ const FeedCard = (props) => {
                 </div>
             </header>
             <div className="post">
-                <div className="feed">
-                    <img src={post.post_url} alt="post"/>
+                <div className="feed" onDoubleClick={(e) => doubleClick(e)} style={{cursor: "pointer"}}>
+                    <img style={{pointerEvents: "none"}} src={post.post_url} alt="post"/>
+                    <FontAwesomeIcon style={{pointerEvents: "none"}} id="likeIcon" className="like-icon" icon={faHeart}/>
                 </div>
                 <footer>
                     <div className="top">
@@ -28,7 +49,13 @@ const FeedCard = (props) => {
                                 <div><FontAwesomeIcon icon={faPaperPlane}/></div>
                             </button>
                             <button>
-                                <div><FontAwesomeIcon icon={faHeart}/></div>
+                                <div>
+                                    {
+                                        !userLiked
+                                            ? <FontAwesomeIcon icon={faHeartRegular}/>
+                                            : <FontAwesomeIcon icon={faHeart} color={"red"}/>
+                                    }
+                                </div>
                             </button>
                             <button>
                                 <div><FontAwesomeIcon icon={faComment}/></div>
