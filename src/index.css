@@ -14,3 +14,11 @@ body {
         padding: 0 !important;
     }
 }
+
+.right-0 {
+    right: 0;
+}
+
+.pointer-cursor {
+    cursor: pointer;
+}

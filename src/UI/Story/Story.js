@@ -15,34 +15,39 @@ const Story = () => {
         setStoryPreViewIndex(index);
     }
 
+    const closeStory = () => {
+        setStoryPreViewIndex("");
+    }
+
     return (
         <>
-            <div className="bg-white d-flex story-container">
-                <div className="d-flex w-100">
-                    <Carousel
-                        itemPadding={[10, 50]}
-                        itemsToShow={9}
-                        pagination={false}
-                        className={"carousel"}
-                    >
-                        <div className="create-story">
-                            <FontAwesomeIcon className="user-icon" icon={faUserCircle} color={"rgb(219,219,219)"}/>
-                            <FontAwesomeIcon className="icon text-primary bg-white" icon={faPlusCircle}/>
-                        </div>
-                        {
-                            story && story.map((element, i) =>
-                                <StoryCard
-                                    key={i} story={element}
-                                    storyClicked={storyClicked}
-                                    index={i}
-                                />)
-                        }
-                    </Carousel>
-                </div>
-            </div>
             {
                 storyPreViewIndex !== "" ?
-                    <StoryView index={storyPreViewIndex} stories={story} storyClicked={storyClicked}/> : <></>
+                    <StoryView index={storyPreViewIndex} stories={story} closeStory={closeStory}/> :
+                    <div className="bg-white d-flex story-container">
+                        <div className="d-flex w-100">
+                            <Carousel
+                                itemPadding={[10, 50]}
+                                itemsToShow={9}
+                                pagination={false}
+                                className={"carousel"}
+                            >
+                                <div className="create-story">
+                                    <FontAwesomeIcon className="user-icon" icon={faUserCircle}
+                                                     color={"rgb(219,219,219)"}/>
+                                    <FontAwesomeIcon className="icon text-primary bg-white" icon={faPlusCircle}/>
+                                </div>
+                                {
+                                    story && story.map((element, i) =>
+                                        <StoryCard
+                                            key={i} story={element}
+                                            storyClicked={storyClicked}
+                                            index={i}
+                                        />)
+                                }
+                            </Carousel>
+                        </div>
+                    </div>
             }
         </>
     );

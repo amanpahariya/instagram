@@ -41,7 +41,7 @@ const HomePage = () => {
                             {
                                 suggestion.map((ele, i) =>
 
-                                    <li className="user d-flex justify-content-between">
+                                    <li key={i} className="user d-flex justify-content-between">
                                         <div className="userProfile">
                                             <img src={ele.profile_image_url} alt="profile"/>
                                         </div>

@@ -11,7 +11,7 @@ const Feeds = () => {
     return (
         <div>
             {
-                posts && posts.map((each) => <FeedCard post={each}/>)
+                posts && posts.map((each, i) => <FeedCard key={i} post={each}/>)
             }
         </div>
     );

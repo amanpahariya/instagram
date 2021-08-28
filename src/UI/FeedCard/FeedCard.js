@@ -40,7 +40,8 @@ const FeedCard = (props) => {
             <div className="post">
                 <div className="feed" onDoubleClick={(e) => doubleClick(e)} style={{cursor: "pointer"}}>
                     <img style={{pointerEvents: "none"}} src={post.post_url} alt="post"/>
-                    <FontAwesomeIcon style={{pointerEvents: "none"}} id="likeIcon" className="like-icon" icon={faHeart}/>
+                    <FontAwesomeIcon style={{pointerEvents: "none"}} id="likeIcon" className="like-icon"
+                                     icon={faHeart}/>
                 </div>
                 <footer>
                     <div className="top">
@@ -75,9 +76,9 @@ const FeedCard = (props) => {
                         </div>
                         <div className="comments my-2">
                             {
-                                post.comments && post.comments.map((each) => {
+                                post.comments && post.comments.map((each, i) => {
                                     return (
-                                        <div className="d-flex">
+                                        <div key={i} className="d-flex">
                                             <p className="fw-bold text-dark mb-0">{each.userName}</p>
                                             <p className="mb-0 mx-2">{each.comment}</p>
                                         </div>

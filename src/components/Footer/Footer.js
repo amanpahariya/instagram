@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.scss';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHome, faSearch} from "@fortawesome/free-solid-svg-icons";
-import {faCompass, faHeart, faPaperPlane} from "@fortawesome/free-regular-svg-icons";
+import {faCompass, faHeart} from "@fortawesome/free-regular-svg-icons";
 
 const Footer = () => {
     return (
