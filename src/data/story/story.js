@@ -1,5 +1,6 @@
 const story = [
     {
+        "id": '1',
         "userName": "ronaldo",
         "profile_image_url": "https://scontent.fbho2-1.fna.fbcdn.net/v/t1.6435-9/127176163_102921408336540_7150226049897198706_n.jpg?_nc_cat=110&ccb=1-4&_nc_sid=8bfeb9&_nc_ohc=-sGNc37j_c8AX-plZyE&tn=kc19wvOPG1b5DAjY&_nc_ht=scontent.fbho2-1.fna&oh=f52c4a3ca5de4b9ba127a4a563393d6d&oe=613A7B33",
         "story": [
@@ -10,9 +11,6 @@ const story = [
                     heading: "ronaldo",
                     profileImage: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg",
                     subheading: "2021-08-12T14:22:40.187Z",
-                },
-                seeMore: ({close}) => {
-                    return <div onClick={close}>Hello, click to close this.</div>;
                 }
             },
             {
@@ -27,6 +25,7 @@ const story = [
 
     },
     {
+        "id": '2',
         "userName": "msdhoni",
         "profile_image_url": "https://scontent.fbho2-1.fna.fbcdn.net/v/t1.6435-9/p640x640/187808682_319108719581857_7985260120139155171_n.jpg?_nc_cat=111&ccb=1-4&_nc_sid=e3f864&_nc_ohc=XK9KIwfhtJcAX_ya4MS&_nc_ht=scontent.fbho2-1.fna&oh=c11996512a29594e4cd176a7f7463e70&oe=6139120F",
         "story": [

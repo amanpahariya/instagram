@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomePage.scss';
-import Feeds from "../../UI/Feeds/Feeds";
-import Story from "../../UI/Story/Story";
+import Feeds from "./Suggestion/Feeds/Feeds";
+import Story from "../Story/Story";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUserCircle} from "@fortawesome/free-solid-svg-icons";
 import suggestion from "../../data/suggestion/suggestion";

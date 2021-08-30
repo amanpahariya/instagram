@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import feeds from '../../data/feeds/feeds';
-import FeedCard from "../FeedCard/FeedCard";
+import feeds from '../../../../data/feeds/feeds';
+import FeedCard from "../../../../UI/FeedCard/FeedCard";
 
 const Feeds = () => {
     const [posts, setPosts] = useState(null);
